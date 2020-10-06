@@ -1,0 +1,10 @@
+<nav class='navbar fixed-bottom ' style="background: #edf1f2; border-top: 1px solid #dee5e7;">
+    <div *ngIf="this.footerData[0].neewee_icon != ''">
+    <a class='navbar-brand text-muted' style='font-size: x-small;'><img src="{{footerData[0].neewee_icon}}"
+  
+        alt='Neewee Logo' style='width: 9.5em;'>{{footerData[0].copyright}}</a>
+    </div>
+    <div *ngIf="this.footerData[0].version != ''">
+        <a class='navbar-brand text-muted' style='font-size: smaller;'>{{footerData[0].version}}</a>
+    </div>
+  </nav>
