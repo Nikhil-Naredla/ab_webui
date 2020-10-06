@@ -8,6 +8,7 @@ import { LandingPageModule } from './landing-page/landing-page.module';
 import { HttpClientModule } from "@angular/common/http";
 import { SummaryViewModule } from './summary-view/summary-view.module';
 import { MachineViewModule } from './machine-view/machine-view.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MachineViewModule } from './machine-view/machine-view.module';
     HttpClientModule,
     FormsModule ,
     SummaryViewModule,
-    MachineViewModule  ],
+    MachineViewModule ,
+  SharedModule ],
   providers: [],
   bootstrap: [AppComponent]
 })

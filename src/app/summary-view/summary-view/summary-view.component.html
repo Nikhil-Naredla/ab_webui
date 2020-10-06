@@ -1,1 +1,103 @@
-<p>summary-view works!</p>
+<br>
+<div class="summary-view ">
+  <div class="summary-view-header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <a class="navbar-brand" href="#">
+            <img src="..\assets\png\summary-home-icon.png" alt='Home Logo' style='width:1.8rem;height: 1.9rem;'>
+        </a>
+        <a class="navbar-brand nav-link dropdown-toggle nav-item dropdown" id="navbarDropdown" style="margin-left: -30px;" href="#">Summary View / RCCB Line</a>
+        <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           
+        </a> -->
+         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Line 1
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    KPI Tracker
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+            </li>
+            <li class="nav-item">
+                <img src="..\assets\png\date.png" alt='Date Logo' style='width:2.5rem;'> 2019-08-12 - 2019-09-12
+            </li>
+            <li class="nav-item nav-item dropdown" style="display: flex;justify-content: space-between;margin-left: 10px;">
+                <img src="..\assets\png\timer.png" alt='Date Logo' style='width:1.8rem;height: 1.9rem;'>
+                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Shift 1
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+            </li>
+            
+
+          </ul>
+        </div>
+      </nav>
+  </div>
+  <br>
+    <section id="OEE">
+        <h4 style="text-align: center;border-bottom: 6px solid lightgray;">OEE</h4>
+        <div class="row" style="height: 100%; padding: 1rem; padding-right: 0;">
+            <div  class="col" *ngFor="let sample of oeeData" style="padding-bottom: 1rem; ">
+                    <div class="card tileCard">
+                    <div class="card-body" style="text-align: center;padding: 0.6rem 0;height: 200px; ">
+                      <h6 class="card-title font-weight-bold" style="color:black; margin: auto; font-size: 2.6vh;">{{sample.name}}</h6> 
+                    </div>
+                  </div>
+            </div>
+        </div>  
+    </section>
+
+    <section id="Capacity">
+        <h4 style="text-align: center;border-bottom: 3px solid lightgray;">Capacity</h4>
+        <div class="row" style="height: 400px; padding: 1rem; padding-right: 0;">
+            <div  class="col" *ngFor="let sample of cp1" style="padding-bottom: 1rem; ">
+                    <div class="card tileCard">
+                    <div class="card-body" style="text-align: center;padding: 0.6rem 0;height: 300px; ">
+                      <h6 class="card-title font-weight-bold" style="color:black; margin: auto; font-size: 2.6vh;">{{sample.name}}</h6> 
+                    </div>
+                  </div>
+            </div>
+            <div  class="col">
+               <div class="row" *ngFor="let sample of cp2" style="padding-bottom: 1rem; width: 100%; ">
+                <div class="card tileCard">
+                    <div class="card-body" style="text-align: center;padding: 0.6rem 0;height: 140px; width: 400px;">
+                      <h6 class="card-title font-weight-bold" style="color:black; margin: auto; font-size: 2.6vh;">{{sample.name}}</h6> 
+                    </div>
+                  </div>
+               </div>
+        </div>
+        </div>  
+    </section>
+</div>

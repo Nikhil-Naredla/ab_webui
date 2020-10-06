@@ -21,7 +21,7 @@ const routes: Routes = [
     loadChildren: () => import('./machine-view/machine-view.module').then(m => m.MachineViewModule)
   },
   {
-    path: 'summary-view',
+    path: 'summaryView',
     loadChildren: () => import('./summary-view/summary-view.module').then(m => m.SummaryViewModule)
   },
  
