@@ -3,12 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LandingPageModule } from './landing-page/landing-page.module';
 import { HttpClientModule } from "@angular/common/http";
 import { SummaryViewModule } from './summary-view/summary-view.module';
 import { MachineViewModule } from './machine-view/machine-view.module';
 import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+
 
 @NgModule({
   declarations: [
@@ -20,9 +23,13 @@ import { SharedModule } from './shared/shared.module';
     LandingPageModule,
     HttpClientModule,
     FormsModule ,
+    ReactiveFormsModule,
     SummaryViewModule,
     MachineViewModule ,
-  SharedModule ],
+  SharedModule,
+  BrowserAnimationsModule,
+  // BsDatepickerModule.forRoot() 
+],
   providers: [],
   bootstrap: [AppComponent]
 })

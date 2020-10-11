@@ -31,7 +31,6 @@ cp2 : any = [
   ngOnInit() {
     
     console.log(this.oeeData.name)
-    console.log(this.tiles_data)
   }
 
 }
